@@ -14,7 +14,7 @@
 "sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
         crossorigin="anonymous" 
         referrerpolicy="no-referrer"></script>
-    <!-- for styling -->
+
     <style>
         table {
             border: 1px solid black;
@@ -43,18 +43,17 @@
         }
     </style>
 </head>
-<!-- create table -->
+
   
 <body>
     <table id="calcu">
         <tr>
             <td colspan="3"><input type="text" id="result"></td>
-            <!-- clr() function will call clr to clear all value -->
+           
             <td><input type="button" value="c" onclick="clr()" /> </td>
         </tr>
         <tr>
-            <!-- create button and assign value to each button -->
-            <!-- dis("1") will call function dis to display value -->
+           
             <td><input type="button" value="1" onclick="dis('1')" 
                         onkeydown="myFunction(event)"> </td>
             <td><input type="button" value="2" onclick="dis('2')" 
@@ -89,7 +88,7 @@
                         onkeydown="myFunction(event)"> </td>
             <td><input type="button" value="." onclick="dis('.')" 
                         onkeydown="myFunction(event)"> </td>
-            <!-- solve function call function solve to evaluate value -->
+         
             <td><input type="button" value="=" onclick="solve()"> </td>
   
             <td><input type="button" value="+" onclick="dis('+')" 
@@ -98,7 +97,7 @@
     </table>
   
     <script>
-        // Function that display value
+     
         function dis(val) {
             document.getElementById("result").value += val
         }
@@ -124,14 +123,14 @@
             }
         }
   
-        // Function that evaluates the digit and return result
+       
         function solve() {
             let x = document.getElementById("result").value
             let y = math.evaluate(x)
             document.getElementById("result").value = y
         }
   
-        // Function that clear the display
+       
         function clr() {
             document.getElementById("result").value = ""
         }
